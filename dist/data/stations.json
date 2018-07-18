@@ -1,0 +1,12 @@
+[
+	{
+		"tag": "GTH",
+		"owner": "GSI",
+		"name": "Galactic Trading Hub",
+		"type": "station",
+		"desc": "what??",
+		"coords": "GPS:Station GTH:-2916326.75:-1165539.62:5545383:",
+		"color": "gray",
+		"size": "large",
+	}
+]

@@ -1,0 +1,101 @@
+[
+	{
+		"name": "OP3/TER-4",
+		"category": "planet",
+		"desc": "earth-like, OP3/TER-4",
+		"coords": "GPS:Body Ter-4:0:0:0:",
+		"color": "rgb(100, 180, 50)",
+		"radius": 110000,
+		"oxygen": "high",
+		"atmosphere": 1.0,
+		"gravity": 0.91,
+		"gravity_range": 43280
+	},
+	{
+		"name": "SIRIUS-R",
+		"category": "moon",
+		"orbits": "OP3/TER-4",
+		"desc": "luna-like moon",
+		"coords": "GPS:Body Sirius:1430000:-290000:0:",
+		"color": "rgb(180, 180, 180)",
+		"radius": 32480,
+		"oxygen": "none",
+		"atmosphere": 0.1,
+		"gravity": 0.25
+	},
+	{
+		"name": "MIDAS",
+		"category": "planet",
+		"desc": "desert? planet",
+		"coords": "GPS:Body Midas:11000000:0:-200000:",
+		"color": "rgb(200, 200, 150)",
+		"radius": 90000,
+		"oxygen": "?",
+		"atmosphere": 0.9,
+		"gravity": 0.91
+	},
+	{
+		"name": "PHRYGIA",
+		"category": "moon",
+		"orbits": "MIDAS",
+		"desc": "desert? moon",
+		"coords": "GPS:Body Phrygia:10000000:530000:-600000:",
+		"color": "rgb(200, 200, 150)",
+		"radius": 19000,
+		"oxygen": "no",
+		"atmosphere": 0.3,
+		"gravity": 0.2
+	},
+	{
+		"name": "SELENE",
+		"category": "planet",
+		"orbits": "GST2",
+		"desc": "mars red, dense planet, toxic atmos",
+		"coords": "GPS:Body Selene:0:0:-15000000:",
+		"color": "rgb(190, 75, 25)",
+		"radius": 72000,
+		"oxygen": "no",
+		"atmosphere": 2,
+		"gravity": 2.1
+	},
+	{
+		"name": "SEDONIA",
+		"category": "moon",
+		"orbits": "SELENE",
+		"desc": "dense moon, non-toxic",
+		"coords": "GPS:Body Sedonia:841000:480000:-14956883:",
+		"color": "rgb(200, 200, 150)",
+		"radius": 19640,
+		"oxygen": "no",
+		"atmosphere": 0.1,
+		"gravity": 0.26
+	},
+	{
+		"name": "GST2",
+		"category": "planet",
+		"desc": "a black hole",
+		"coords": "GPS:Anomaly GST2:837637.31:357604.97:-16083141:",
+		"color": "rgb(0, 0, 0)",
+		"radius": 120000,
+		"oxygen": "no",
+		"gravity": 10000
+	},
+	{
+		"name": "UO309",
+		"category": "planet",
+		"orbits": "SELENE",
+		"desc": "funky bidness",
+		"coords": "GPS:Anomaly UO309:669216.44:169219.67:-16755637:",
+		"color": "rgb(255, 255, 255)",
+		"radius": 19000,
+		"gravity": 2.7
+	},
+	{
+		"name": "SUN",
+		"category": "planet",
+		"desc": "the sun",
+		"coords": "GPS:Body Sun:841000:4800000:-14956883:",
+		"color": "rgb(250, 250, 0)",
+		"radius": 1000000
+	}
+]

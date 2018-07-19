@@ -2,7 +2,7 @@ function Station( args ) {
 	this.mesh = new THREE.Mesh(
 		new THREE.SphereGeometry( args.radius, 32, 32 ),
 		// new THREE.BoxGeometry( 0.1, 0.1, 0.1 ),
-		new THREE.MeshBasicMaterial( { color: 0xaaaaaa, wireframe: false, side: THREE.DoubleSide } ),
+		new THREE.MeshLambertMaterial( { color: 0xaaaaaa, wireframe: false, side: THREE.DoubleSide } ),
 	)
 
 	this.mesh.position.copy( args.coords )

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server dist -p 80 -c-1 -o --cors"
+    "start-old": "http-server dist -p 80 -c-1 -o --cors",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "http-server": "^0.11.1",
     "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.4"
   }
 }

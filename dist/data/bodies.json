@@ -94,8 +94,8 @@
 		"name": "SUN",
 		"category": "planet",
 		"desc": "the sun",
-		"coords": "GPS:Body Sun:841000:4800000:-14956883:",
+		"coords": "GPS:Body Sun:111841000:3800000:-14956883:",
 		"color": "rgb(250, 250, 0)",
-		"radius": 1000000
+		"radius": 100000000
 	}
 ]

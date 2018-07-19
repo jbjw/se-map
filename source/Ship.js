@@ -6,7 +6,7 @@ function Ship( args ) {
 	this.mesh = new THREE.Mesh(
 		// new THREE.SphereGeometry( args.radius, 32, 32 ),
 		new THREE.BoxGeometry( 1, 2, 1, 1 ),
-		new THREE.MeshBasicMaterial( { color: 0xaaaaaa, wireframe: false, side: THREE.DoubleSide } ),
+		new THREE.MeshLambertMaterial( { color: 0xaaaaaa, wireframe: false, side: THREE.DoubleSide } ),
 	)
 
 	scene.add( this.mesh )

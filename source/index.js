@@ -19,6 +19,20 @@ fetch( "data/bodies.json" ).then( response => {
 	start()
 } )
 
+fetch( "data/asteroids.json" ).then( response => {
+	return response.json()
+} ).then( json => {
+	entities = json
+	start()
+} )
+
+fetch( "data/stations.json" ).then( response => {
+	return response.json()
+} ).then( json => {
+	entities = json
+	start()
+} )
+
 const scene = new THREE.Scene()
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.01, 100000 )
 // const camera = new THREE.OrthographicCamera( width / - 2, width / 2, height / 2, height / - 2, -10, 1000 )
@@ -89,6 +103,9 @@ var material = new THREE.MeshBasicMaterial( { color: 0xffff00, envMap: textureCu
 scene.background = textureCube
 // scene.background = new THREE.Color( 0x0000ff )
 
+var directionalLight = new THREE.DirectionalLight( 0xffffff, 1.0 );
+scene.add( directionalLight );
+
 let objects = []
 
 function parseCoords( coords ) {
@@ -138,22 +155,27 @@ function start() {
 			case "asteroid":
 				var tmp = new Body( {
 					// color: utils.chooseColor(),
-					color: new THREE.Color( "gray" ),
-					radius: entity.radius * scale,
+					color: new THREE.Color( "brown" ),
+					// radius: entity.radius * scale,
+					radius: 10000 * scale,
 					coords: convertCoords( parseCoords( entity.coords ) ),
 					name: entity.tag,
 				} )
 				objects.push( tmp )
+				scene.add( tmp.mesh )
 				break
 			case "station":
+
 				var tmp = new Body( {
 					// color: utils.chooseColor(),
-					color: new THREE.Color( entity.color ),
-					radius: entity.radius * scale,
+					color: new THREE.Color( "gray" ),
+					// radius: entity.radius * scale,
+					radius: 100000 * scale,
 					coords: convertCoords( parseCoords( entity.coords ) ),
 					name: entity.tag,
 				} )
 				objects.push( tmp )
+				scene.add( tmp.mesh )
 				break
 			case "planet":
 				var tmp = new Body( {
@@ -162,6 +184,11 @@ function start() {
 					coords: convertCoords( parseCoords( entity.coords ) ),
 					name: entity.name,
 				} )
+				console.log( entity.name )
+				if ( entity.name === "SUN" ) {
+					console.log("the sun")
+					tmp.mesh.material.emissive = new THREE.Color( "yellow" )
+				}
 				objects.push( tmp )
 				scene.add( tmp.mesh )
 				scene.add( tmp.label.sprite )
